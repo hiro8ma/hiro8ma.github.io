@@ -1849,6 +1849,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/gh-pages@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@types/gh-pages/-/gh-pages-3.2.1.tgz#0c47e024774461fce161570bca309c51d787ef67"
+  integrity sha512-y5ULkwfoOEUa6sp2te+iEODv2S//DRiKmxpeXboXhhv+s758rSSxLUiBd6NnlR7aAY4nw1X4FGovLrSWEXWLow==
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
