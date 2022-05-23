@@ -8,14 +8,14 @@ function App() {
         <p>
           <code>hiro8ma</code>
         </p>
-        <a
-          className="App-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.wantedly.com/id/hiro8ma"
-        >
-          wantedly
-        </a>
+        {/* <a */}
+        {/*   className="App-link" */}
+        {/*   target="_blank" */}
+        {/*   rel="noopener noreferrer" */}
+        {/*   href="https://www.wantedly.com/id/hiro8ma" */}
+        {/* > */}
+        {/*   wantedly */}
+        {/* </a> */}
       </header>
     </div>
   );
