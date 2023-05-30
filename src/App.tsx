@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          <code>hiro8ma</code>
+          <code>hiroma</code>
         </p>
         {/* <a */}
         {/*   className="App-link" */}
