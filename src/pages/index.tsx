@@ -3,18 +3,25 @@ import Head from 'next/head';
 import {
   GetStaticProps,
   GetStaticPaths,
+  GetServerSideProps,
   NextPage,
   NextPageContext,
 } from 'next';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
+import Link from 'next/link';
 
 type Props = {
   message: string;
 };
 
-const SSG: NextPage<Props> = props => {
+const Home: NextPage<Props> = props => {
   const { message } = props;
+
+  const router = useRouter();
+  if (router.isFallback) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div>
@@ -38,7 +45,8 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
     props: {
       message,
     },
+    revalidate: 60,
   };
 };
 
-export default SSG;
+export default Home;
