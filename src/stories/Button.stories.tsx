@@ -1,5 +1,5 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Button } from '../components/Button';
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { Button } from '../components/Button'
 
 export default {
   title: 'Button',
@@ -14,37 +14,37 @@ export default {
       control: { type: 'text' },
     },
   },
-} as ComponentMeta<typeof Button>;
+} as ComponentMeta<typeof Button>
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
+const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const TemplateTest = Template.bind({});
+export const TemplateTest = Template.bind({})
 
 TemplateTest.args = {
   variant: 'primary',
   children: 'Primary',
-};
+}
 
-export const Primary = props => {
+export const Primary = (props) => {
   return (
     <Button {...props} variant="primary">
       Primary
     </Button>
-  );
-};
+  )
+}
 
-export const Success = props => {
+export const Success = (props) => {
   return (
     <Button {...props} variant="success">
       Primary
     </Button>
-  );
-};
+  )
+}
 
-export const Transparent = props => {
+export const Transparent = (props) => {
   return (
     <Button {...props} variant="transparent">
       Transparent
     </Button>
-  );
-};
+  )
+}

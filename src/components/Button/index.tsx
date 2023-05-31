@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 const variants = {
   primary: {
@@ -16,20 +16,20 @@ const variants = {
     backgroundColor: 'transparent',
     border: '1px solid black',
   },
-} as const;
+} as const
 
 type ButtonProps = {
-  variant: keyof typeof variants;
-};
+  variant: keyof typeof variants
+}
 
 export const Button = styled.button<ButtonProps>`
   ${({ variant }) => {
-    const style = variants[variant];
+    const style = variants[variant]
     return css`
       color: ${style.color};
       background-color: ${style.backgroundColor};
       border: ${style.border};
-    `;
+    `
   }}
 
   border-radius: 12px;
@@ -42,4 +42,4 @@ export const Button = styled.button<ButtonProps>`
   &:focus {
     outline: none;
   }
-`;
+`

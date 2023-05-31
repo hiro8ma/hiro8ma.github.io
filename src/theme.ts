@@ -9,4 +9,4 @@ export const theme = {
   fonts: {
     primary: `arial, sans-serif`,
   },
-};
+}
