@@ -25,7 +25,7 @@ TemplateTest.args = {
   children: 'Primary',
 }
 
-export const Primary = (props) => {
+export const Primary = (props: any) => {
   return (
     <Button {...props} variant="primary">
       Primary
@@ -33,7 +33,7 @@ export const Primary = (props) => {
   )
 }
 
-export const Success = (props) => {
+export const Success = (props: any) => {
   return (
     <Button {...props} variant="success">
       Primary
@@ -41,7 +41,7 @@ export const Success = (props) => {
   )
 }
 
-export const Transparent = (props) => {
+export const Transparent = (props: any) => {
   return (
     <Button {...props} variant="transparent">
       Transparent

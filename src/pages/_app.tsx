@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { theme } from '../theme'
+import { theme } from '../themes'
 
 const GlobalStyle = createGlobalStyle`
 html,
