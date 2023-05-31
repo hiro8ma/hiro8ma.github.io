@@ -46,6 +46,8 @@ const H1 = styled.h1`
 
 const Badge = styled.span`
   padding: 8px 16px;
+  margin: 10px;
+  font-size: 12px;
   font-weight: bold;
   text-align: center;
   color: ${(props) => props.theme.colors.white};
@@ -60,6 +62,7 @@ const Text = styled.p`
 
 const BorderedText = styled(Text)`
   padding: 8px 16px;
+  width: 200px;
   border: 3px solid blue;
   border-radius: 8px;
 `
@@ -80,12 +83,12 @@ const Home: NextPage<Props> = (props) => {
       </Head>
       <main>
         <H1>hiro8ma</H1>
-        <Badge>{message}</Badge>
         <Text>
           <StyledLink href="https://github.com/hiro8ma">Github</StyledLink>
         </Text>
-        <BorderedText>World</BorderedText>
-        <Button variant="primary">Button</Button>
+        <BorderedText>hiro8ma@gmail.com</BorderedText>
+        <Button variant="success">Send</Button>
+        <Badge>{message}</Badge>
       </main>
     </div>
   )

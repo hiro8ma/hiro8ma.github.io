@@ -38,6 +38,7 @@ export const Button = styled.button<ButtonProps>`
   line-height: 22px;
   letter-spacing: 0;
   cursor: pointer;
+  padding: 8px 16px;
 
   &:focus {
     outline: none;
