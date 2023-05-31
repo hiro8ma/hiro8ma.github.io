@@ -9,11 +9,60 @@ import {
 } from 'next';
 import { useRouter } from 'next/router';
 import { ParsedUrlQuery } from 'querystring';
-import Link from 'next/link';
+import Link, { LinkProps } from 'next/link';
+import styled, { css } from 'styled-components';
+import { Button } from '../components/Button';
+import { Input } from '../components/Input';
 
 type Props = {
   message: string;
 };
+
+type BaseLinkProps = React.PropsWithChildren<LinkProps> & {
+  className?: string;
+  children: React.ReactNode;
+};
+
+const BaseLink = (props: BaseLinkProps) => {
+  const { className, children, ...rest } = props;
+  return (
+    <Link {...rest}>
+      <a className={className}>{children}</a>
+    </Link>
+  );
+};
+
+const StyledLink = styled(BaseLink)`
+  color: #9057ff;
+`;
+
+const fontColor = css`
+  color: #4689ff;
+`;
+
+const H1 = styled.h1`
+  color: ${props => props.theme.colors.default};
+`;
+
+const Badge = styled.span`
+  padding: 8px 16px;
+  font-weight: bold;
+  text-align: center;
+  color: ${props => props.theme.colors.white};
+  background: #4689ff;
+  border-radius: 16px;
+`;
+
+const Text = styled.p`
+  ${fontColor}
+  font-weight: bold;
+`;
+
+const BorderedText = styled(Text)`
+  padding: 8px 16px;
+  border: 3px solid blue;
+  border-radius: 8px;
+`;
 
 const Home: NextPage<Props> = props => {
   const { message } = props;
@@ -30,8 +79,13 @@ const Home: NextPage<Props> = props => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <p>hiro8ma</p>
-        <p>{message}</p>
+        <H1>hiro8ma</H1>
+        <Badge>{message}</Badge>
+        <Text>
+          <StyledLink href="https://github.com/hiro8ma">Github</StyledLink>
+        </Text>
+        <BorderedText>World</BorderedText>
+        <Button variant="primary">Button</Button>
       </main>
     </div>
   );
